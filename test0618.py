@@ -276,39 +276,65 @@
 # string2 = "   ".join(list2)
 # print(string2)
 
-import random
-import numpy
-import A
-print(A.main.__doc__)
+# import random
+# import numpy
+# import A
+# print(A.main.__doc__)
 
-print(A.main(1, 2))
-
-
-def mian(a, b):
-    y = a+b
-    print(y)
+# print(A.main(1, 2))
 
 
-mian(1, 2)
-print("dfghjk=",)
+# def mian(a, b):
+#     y = a+b
+#     print(y)
+
+
+# mian(1, 2)
+# print("dfghjk=",)
+
+__metaclass__ = type  # 新式类
+self = []
+
+
+class Person:  # 创建类
+    def __init__(self, name):  # 构造函数
+        self.name = name
+
+    def getName(self):  # 类中的方法（函数）
+        return self.name
+
+    def color(self, color):
+        print "%s is %s" % (self.name, color)
+
+
+girl = Person('canglaoshi')  # 实例化
+name = girl.getName()  # 调用方法（函数）
+
+print "the person's name is: ", name
+girl.color("white")
 
 __metaclass__ = type
 
 
 class DREAM (object):
+    self = DREAM()
+
     def character(self, name):
         self.name = name
 
     def action(self, acts):
-        self.action = "坚毅"
+        acts = "坚毅"
 
     def backg(self, hards):
-        self.backg = "渺茫"
+        hards = "渺茫"
 
     def nums(self, n):
         self.nums = n
-    print("在%f的时候，%f依然%f的坚持了%f的学习") % (
-        self.name, self.backg, self.action, self.nums)
+
+    def pr(self, name, acts, hards):
+        print("在%f的时候，%f依然%f的坚持了%f的学习") % (
+            name, acts, hards, n)
 
 
 me = DREAM("Claire")
+me.nums = 5
