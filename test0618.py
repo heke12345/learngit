@@ -291,3 +291,24 @@ def mian(a, b):
 
 mian(1, 2)
 print("dfghjk=",)
+
+__metaclass__ = type
+
+
+class DREAM (object):
+    def character(self, name):
+        self.name = name
+
+    def action(self, acts):
+        self.action = "坚毅"
+
+    def backg(self, hards):
+        self.backg = "渺茫"
+
+    def nums(self, n):
+        self.nums = n
+    print("在%f的时候，%f依然%f的坚持了%f的学习") % (
+        self.name, self.backg, self.action, self.nums)
+
+
+me = DREAM("Claire")
