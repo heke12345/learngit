@@ -3,6 +3,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 
+import this
 __metaclass__ = type
 
 
@@ -60,3 +61,49 @@ me.backg("1")
 # 这个问题可以解决？
 me.nums(5)
 me.pr()
+
+
+class Food(object):
+    def __init__(self, n, v, w):
+        self.name = n
+        self.value = v
+        self.calories = w
+
+    def getValue(self):
+        return self.value
+
+    def getCal(self):
+        return self.calories
+
+    def density(self):
+        return self.getValue()/self.getCal()
+
+    def __str__(self):
+        return '\t'.join([self.name, str(self.value), str(self.calories)])
+
+
+class Menu(object):
+    def __init__(self):
+        self.foodItems = []
+
+    def add(self, foodItem):
+        self.foodItems.append(foodItem)
+
+    def __str__(self):
+        """
+             prints the food items
+        """
+        s = 'Item\tValue\tCalories'
+        s += '
+    '.join(str(f) for f in self.foodItems)
+    return s
+
+
+names = ['burger', 'fries', 'coke']
+values = [1, 2, 3]
+calories = [100, 200, 300]
+
+m = Menu()
+items = list(Food(n, v, c) for n, v, c in zip(names, values, calories))
+m.foodItems = items
+print(m)
