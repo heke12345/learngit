@@ -94,7 +94,7 @@ class Menu(object):
              prints the food items
         """
         s = 'Item\tValue\tCalories'
-        s += '\n'.join(str(f) for f in self.foodItems)
+        s += "\n" + '\n'.join(str(f) for f in self.foodItems)
         return s
 
 
@@ -107,3 +107,9 @@ items = list(Food(n, v, c) for n, v, c in zip(names, values, calories))
 m.foodItems = items
 print(m)
 # 为啥输出的结果burger没有换行？
+
+
+s1 = "123"
+s2 = "dgd"
+s3 = s1+"\n" + "\n".join(s2)
+print(s3)
