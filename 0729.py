@@ -98,18 +98,58 @@ class Menu(object):
         return s
 
 
-names = ['burger', 'fries', 'coke']
-values = [1, 2, 3]
-calories = [100, 200, 300]
+names = ['burger', 'fries', 'coke', "test"]
+values = [1, 2, 3, 4]
+calories = [100, 200, 300, 000]
 
 m = Menu()
 items = list(Food(n, v, c) for n, v, c in zip(names, values, calories))
 m.foodItems = items
 print(m)
-# 为啥输出的结果burger没有换行？
+# 为啥输出的结果burger没有换行？join是分隔符合并，所以第一个是没有分隔符，要重新加一个回车
 
+
+def foo(num, str):
+    name = "qiwsir"
+    print(locals())
+    print(globals())
+
+
+foo(221, "qiwsir.github.io")
 
 s1 = "123"
 s2 = "dgd"
 s3 = s1+"\n" + "\n".join(s2)
 print(s3)
+# 类的继承测试
+
+
+class A(object):
+    def shuxing1(self):
+        print("我是1")
+
+
+class B(object):
+    def shuxing1(self):
+        print("我是2")
+
+    def shuxing2(slef):
+        print("我是3")
+
+
+class E(object):
+    def shuxing3(self):
+        print("我是4")
+
+
+class C(A, B):
+    pass
+
+
+class D(A, E):
+    pass
+
+
+test = D()
+test.shuxing1()
+test.shuxing3()
