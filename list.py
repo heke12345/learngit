@@ -22,7 +22,8 @@ B1 = [1, 2, 3]
 print(A1+B1)
 A1 = 4
 # type(lambda(A1: A1+B1))
-n = np.array([1, 2, 3, 4])
+n = np.array([1, 2, 3, 4, 5, 3, 4, 6, 7])
 print(n)
-s = n.reshape(2, 2)
+s = n.reshape(3, 3)
 print(s)
+x =
