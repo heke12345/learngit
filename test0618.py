@@ -297,6 +297,8 @@ self = []
 
 
 class Person:  # 创建类
+    self = Person()
+
     def __init__(self, name):  # 构造函数
         self.name = name
 
